@@ -1,0 +1,13 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: main
+chapters:
+- file: Projekte
+- file: Lehre
+  sections:
+  - file: PsyBsc2
+    sections:
+    - file: R-Crash-Kurs
+- file: Extras
