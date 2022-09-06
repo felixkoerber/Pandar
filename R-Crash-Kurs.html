@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>R Crash-Kurs &#8212; Panda-Python</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,7 +21,7 @@
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -36,7 +37,7 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -479,9 +480,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="r-crash-kurs">
+  <section class="tex2jax_ignore mathjax_ignore" id="r-crash-kurs">
 <h1>R Crash-Kurs<a class="headerlink" href="#r-crash-kurs" title="Permalink to this headline">#</a></h1>
-<div class="section" id="inhalte">
+<section id="inhalte">
 <h2>Inhalte<a class="headerlink" href="#inhalte" title="Permalink to this headline">#</a></h2>
 <div class="dropdown admonition">
 <p class="admonition-title">Kernfragen dieses Beitrags</p>
@@ -501,7 +502,7 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
-<div class="section" id="warum-r">
+<section id="warum-r">
 <h3>Warum R?<a class="headerlink" href="#warum-r" title="Permalink to this headline">#</a></h3>
 <p>Ziel dieses gesamten R-Praktikums ist es, dass Sie am Ende des Semester geübt im Umgang mit R sind, die Grundfunktionalität beherrschen und die Analyseverfahren durchführen können, die in der Vorlesung behandelt werden. Damit wir - oder genauer genommen, eigentlich Sie - dieses Ziel erreichen, legen wir hier mit einer “kurzen” Einführung in die Grundprinzipien von und den Umgang mit R los. Viele Dinge, die hier besprochen werden, sind auch in den anderen Sitzungen zu dieser Veranstaltung relevant und werden dort immer wieder vor kommen. Deswegen ist es das Beste, einfach nebenbei RStudio auf zu haben und die hier beschriebenen Schritte auch direkt selbst mit zu machen.</p>
 <p>Zuerst aber ein bisschen ausholen: R haben wir für die Lehre aus einer Reihe von Programmen ausgewählt, weil es ein paar hervorragende Eigenschaften hat:</p>
@@ -524,56 +525,65 @@ title="Print to PDF"
 <blockquote>
 <div><p>Ein paar nützliche Links für R sind die R Main Page, wo R runtergeladen werden kann und diverse technische Details zu finden sind. Für eine kurze, schnelle Einführung in verschiede R-relevante Themen bietet sich Quick R und, spezifisch für die Psychologie, das Personality Project an. Eine Einführung in die R-Nutzung, an die auch dieses Skript angelehnt ist, findet sich im repository Scientific Methods for Open Behavioral, Social and Cognitive Sciences.</p>
 </div></blockquote>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="rstudio">
+<section id="rstudio">
 <h3>RStudio<a class="headerlink" href="#rstudio" title="Permalink to this headline">#</a></h3>
 <p>Weil die traditionelle R Nutzeroberfläche extrem spartanisch ist, werden wir auf dieser Seite mit RStudio arbeiten. RStudio ist eine zusätzliche Nutzeroberfläche, die den Umgang durch diverse convenience features mit R ein wenig erleichtert. Es muss separat installiert werden, ist aber, genau wie R selbst, gratis erhältlich. Um RStudio herunterzuladen besuchen Sie am einfachsten <a class="reference external" href="https://www.rstudio.com/">https://www.rstudio.com/</a>.</p>
-<a class="bg-primary mb-1 reference internal image-reference" href="_images/rstudio.png"><img alt="fishy" class="bg-primary mb-1 align-center" src="_images/rstudio.png" style="width: 600px;" /></a>
+<a class="bg-primary mb-1 reference internal image-reference" href="../pandar/images/rstudio.png"><img alt="fishy" class="bg-primary mb-1 align-center" src="../pandar/images/rstudio.png" style="width: 600px;" /></a>
 <p>RStudio besteht aus vier Panels. Zunächst sind nur drei sichtbar - durch <code class="docutils literal notranslate"><span class="pre">Strg+Shift+n</span></code> (OS X: <code class="docutils literal notranslate"><span class="pre">Cmd+Shift+n</span></code>) oder über den</p>
-<a class="bg-primary mb-1 reference internal image-reference" href="_images/new_script.png"><img alt="new_script" class="bg-primary mb-1 align-center" src="_images/new_script.png" style="width: 200px;" /></a>
+<a class="bg-primary mb-1 reference internal image-reference" href="../pandar/images/new_script.png"><img alt="new_script" class="bg-primary mb-1 align-center" src="../pandar/images/new_script.png" style="width: 200px;" /></a>
 <p>Button öffnen Sie eine neue Skriptdatei und das vierte Panel erscheint. R ist syntaxbasiert - genau genommen ist R eigentlich eine Programmiersprache und kein Auswertungsprogramm - und im neu erschienenen Fenster können Sie diese Syntax schreiben. Das pure schreiben bewirkt zunächst nichts. Damit etwas passiert, muss die Syntax mit <code class="docutils literal notranslate"><span class="pre">Strg+Return</span></code> (OS X: <code class="docutils literal notranslate"><span class="pre">cmd+Return</span></code>) oder mit dem</p>
-<a class="bg-primary mb-1 reference internal image-reference" href="_images/run.png"><img alt="run" class="bg-primary mb-1 align-center" src="_images/run.png" style="width: 200px;" /></a>
+<a class="bg-primary mb-1 reference internal image-reference" href="../pandar/images/run.png"><img alt="run" class="bg-primary mb-1 align-center" src="../pandar/images/run.png" style="width: 200px;" /></a>
 <p>Button ausgeführt werden. Wenn Sie z.B. 3 + 4 in die Syntax schreiben und so ausführen, erscheint in der Konsole:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="m">3</span> <span class="o">+</span> <span class="m">4</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">7</div></div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
 </div>
 </div>
+</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="erste-schritte">
+<section id="erste-schritte">
 <h3>Erste Schritte<a class="headerlink" href="#erste-schritte" title="Permalink to this headline">#</a></h3>
 <p>Eine wichtige Funktionalität jeder Programmiersprache sind Kommentare, die dazu dienen sollen das Vorgehen in Syntax zu gliedern und leichter verständlich zu machen. In R werden sie durch (beliebig viele) <code class="docutils literal notranslate"><span class="pre">#</span></code> begonnen und enden bei einem Zeilenumbruch. Mit Kommentaren kann Syntax auch in verschiedene Abschnitte gegliedert werden. Empfehlenswert ist es, solche Abschnittüberschriften mit <code class="docutils literal notranslate"><span class="pre">####</span></code> zu beginnen und mit <code class="docutils literal notranslate"><span class="pre">----</span></code> zu beenden. RStudio erkennt solche Kommentare automatisch als Überschriften und stellt über den</p>
-<a class="bg-primary mb-1 reference internal image-reference" href="_images/outline.png"><img alt="outline" class="bg-primary mb-1 align-center" src="_images/outline.png" style="width: 200px;" /></a>
+<a class="bg-primary mb-1 reference internal image-reference" href="../pandar/images/outline.png"><img alt="outline" class="bg-primary mb-1 align-center" src="../pandar/images/outline.png" style="width: 200px;" /></a>
 <p>Button eine darauf basierende Gliederung zur Verfügung.</p>
 <p>Wir können diese Funktionalität der Kommentare am Beispiel der Nutzung von R als Taschenrechner ausprobieren:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#### R als Taschenrechner ----</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#### R als Taschenrechner ----</span>
 
-<span class="m">3</span> <span class="o">+</span> <span class="m">4</span>   <span class="c1"># Addition</span>
+<span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span>   <span class="c1"># Addition</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">7</div></div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="m">3</span> <span class="o">-</span> <span class="m">4</span>   <span class="c1"># Subtraktion</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">-</span> <span class="mi">4</span>   <span class="c1"># Subtraktion</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">-1</div></div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-1
+</pre></div>
 </div>
 </div>
-<div class="section" id="daten">
+</div>
+</section>
+<section id="daten">
 <h3>Daten<a class="headerlink" href="#daten" title="Permalink to this headline">#</a></h3>
 <p>Um zu verstehen, wie Daten in R funktionieren, nutzen wir als Beispiel ein klassisches Experiment aus der Psychologie: den Stroop Test. Die Grundidee lässt sich am leichtesten in einem Bild darstellen:</p>
 <table class="colwidths-auto table">
@@ -593,9 +603,9 @@ title="Print to PDF"
 </tbody>
 </table>
 <p>Der Stroop-Effekt ist der Unterschied zwischen der durchschnittlichen Zeit, die man benötigt um die Farbe zu nennen, in der ein Wort abgebildet ist - je nachdem ob die Farbe und das Wort gleich sind oder nicht. Wenn Sie über den Stroop Test mehr erfahren möchten, oder ihn selbst mal ausprobieren wollen, finden Sie bei <span class="xref myst">Psytoolkit</span> Informationen und eine Online-Variante des Tests.</p>
-</div>
-</div>
-<div class="section" id="aufgaben">
+</section>
+</section>
+<section id="aufgaben">
 <h2>Aufgaben<a class="headerlink" href="#aufgaben" title="Permalink to this headline">#</a></h2>
 <div class="dropdown admonition">
 <p class="admonition-title">R als Taschenrechner</p>
@@ -606,8 +616,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="losungen">
+</section>
+<section id="losungen">
 <h2>Lösungen<a class="headerlink" href="#losungen" title="Permalink to this headline">#</a></h2>
 <div class="dropdown admonition">
 <p class="admonition-title">R als Taschenrechner</p>
@@ -615,8 +625,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -627,16 +637,16 @@ title="Print to PDF"
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "r"
+            mode: "python"
         },
         kernelOptions: {
-            kernelName: "ir",
+            kernelName: "python3",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'ir'</script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
