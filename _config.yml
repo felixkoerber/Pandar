@@ -35,6 +35,3 @@ launch_buttons:
   notebook_interface: "jupyterlab"  # or "classic"
   binderhub_url             : "https://mybinder.org"  # The URL of the BinderHub (e.g., https://mybinder.org)
   thebe                  : true
-  kernelOptions: {
-  kernelName: "IRkernel",
-},
